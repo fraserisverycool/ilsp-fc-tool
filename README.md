@@ -14,7 +14,7 @@ I like to alter the log files that the crawler creates by adding a single line o
 
 `LOGGER.info("Iteration " + curLoop + " out of " + endLoop);`
 
-~~~~~~~~~~~~~~~~
+~~~ No longer optional ~~~
 
 You can compile the crawler by using the following command:
 
