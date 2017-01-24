@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resourceInfo xmlns="http://www.ilsp.gr/META-XMLSchema">
+    <identificationInfo>
+        <resourceName lang="en">de_museums_deu-eng</resourceName>
+        <description lang="en">Parallel (de-en) corpus of 32794 translation units.</description>
+    </identificationInfo>
+    <distributionInfo>
+        <licenceInfo>
+            <licence>underReview</licence>
+        </licenceInfo>
+    </distributionInfo>
+    <resourceCreationInfo>
+        <resourceCreator>
+            <organizationInfo>
+                <organizationShortName lang="en">ILSP</organizationShortName>
+                <communicationInfo>
+                    <url>http://www.ilsp.gr</url>
+                </communicationInfo>
+            </organizationInfo>
+        </resourceCreator>
+        <fundingProject>
+            <projectID>ELRC</projectID>
+            <url>http://lr-coordination.eu/</url>
+        </fundingProject>
+        <creationEndDate>2016-08-08</creationEndDate>
+    </resourceCreationInfo>
+    <resourceComponentType>
+        <corpusInfo>
+            <resourceType>corpus</resourceType>
+            <corpusMediaType>
+                <corpusTextInfo>
+                    <mediaType>text</mediaType>
+                    <lingualityInfo>
+                        <lingualityType>bilingual</lingualityType>
+                    </lingualityInfo>
+                    <languageInfo>
+                        <languageId>de</languageId>
+                        <sizePerLanguage>
+                            <size>467334</size>
+                            <sizeUnit>words</sizeUnit>
+                        </sizePerLanguage>
+                        <sizePerLanguage>
+                            <size>55371</size>
+                            <sizeUnit>lexicalTypes</sizeUnit>
+                        </sizePerLanguage>
+                    </languageInfo>
+                    <languageInfo>
+                        <languageId>en</languageId>
+                        <sizePerLanguage>
+                            <size>517445</size>
+                            <sizeUnit>words</sizeUnit>
+                        </sizePerLanguage>
+                        <sizePerLanguage>
+                            <size>33158</size>
+                            <sizeUnit>lexicalTypes</sizeUnit>
+                        </sizePerLanguage>
+                    </languageInfo>
+                    <sizeInfo>
+                        <size>32794</size>
+                        <sizeUnit>translationUnits</sizeUnit>
+                    </sizeInfo>
+                    <textFormatInfo>
+                        <mimeType>application/x-tmx+xml</mimeType>
+                    </textFormatInfo>
+                    <characterEncodingInfo>
+                        <characterEncoding>UTF-8</characterEncoding>
+                    </characterEncodingInfo>
+                    <annotationInfo>
+                        <annotationType>sentence alignment</annotationType>
+                        <annotationStandoff>false</annotationStandoff>
+                        <segmentationLevel>sentence</segmentationLevel>
+                        <annotationFormat>application/x-tmx+xml</annotationFormat>
+                        <conformanceToStandardsBestPractices>TMX</conformanceToStandardsBestPractices>
+                        <annotationMode>automatic</annotationMode>
+                        <annotationTool>
+                            <targetResourceNameURI>ILSP-FC alignment and TMX filtering module</targetResourceNameURI>
+                        </annotationTool>
+                    </annotationInfo>
+                    <domainInfo>
+                        <domain></domain>
+                        <domainId></domainId>
+                        <conformanceToClassificationScheme></conformanceToClassificationScheme>
+                    </domainInfo>
+                    <creationInfo>
+                        <creationModeDetails>The ILSP Focused Crawler was used for the acquisition of bilingual data from multilingual websites, and for the normalization, cleaning, (near) de-duplication and identification of parallel documents. The Maligna sentence aligner was used for extracting segment alignments from crawled parallel documents. As a post-processing step, alignments were merged into one TMX file. The following filters were applied:  TMX files generated from document pairs which have been identified by non-aupdih methods were discarded ;  TMX files with a zeroToOne_alignments/total_alignments ratio larger than 0.16, were discarded ;  Alignments of non-[1:1] type(s) were discarded. ;  Alignments with a TUV (after normalization) that has less than 2 tokens, were discarded/annotated ;  Alignments with a l1/l2 TUV length ratio smaller than 0.6 or larger than 1.6, were discarded/annotated ;  Alignments in which different digits appear in each TUV were discarded/annotated ;  Alignments with identical TUVs (after normalization) were removed. ;  Alignments with only non-letters in at least one of their TUVs were removed ;  Duplicate alignments were discarded. There are 27739 TUs with no annotation, containing 430328 words and 51600 lexical types in de and 483438 words and 30950 lexical types in en</creationModeDetails>
+                        <creationTool>
+                            <targetResourceNameURI>http://nlp.ilsp.gr/redmine/projects/ilsp-fc/</targetResourceNameURI>
+                        </creationTool>
+                    </creationInfo>
+                </corpusTextInfo>
+            </corpusMediaType>
+        </corpusInfo>
+    </resourceComponentType>
+</resourceInfo>

@@ -8,11 +8,13 @@ First of all, clone this git page into your favourite directory. Then, download 
 
 http://nlp.ilsp.gr/redmine/projects/ilsp-fc/files
 
-** --- Optional --- **
+~~~ Optional ~~~
 
 I like to alter the log files that the crawler creates by adding a single line of code into the crawler before you compile it. It's in ilsp-fc-2.2.3/src/main/java/gr/ilsp/fc/main/Crawl.java at around line 496, depending on which release you're using. At the point where it prints how many pages it has visited at each iteration, I like knowing how many interations we have left. The "checkup.py" tool uses this to how slowly things are running.
 
 `LOGGER.info("Iteration " + curLoop + " out of " + endLoop);`
+
+~~~~~~~~~~~~~~~~
 
 You can compile the crawler by using the following command:
 
@@ -22,11 +24,12 @@ This will create the all important ilsp-fc-2.2.3-jar-with-dependencies.jar file.
 
 ## Preparing a webcrawl
 
-This tool takes as input a list of websites and a language specification, and outputs a merged tmx file of all the aligned pairs from those websites. Key is that you use a consistent basename for your webcrawl. For example, if I want to make a resource from german government websites I would call it "de_government".
+This tool takes as input a list of websites and a language specification, and outputs a merged tmx file of all the aligned pairs from those websites. Key is that you use a consistent basename for your webcrawl. For example, if I want to make a resource from german government websites I would call it "de\_government".
 
-The input "seed website" file should be in the /seeds directory, and should be named, for example, "de_government.txt". It should have the following format:
+The input "seed website" file should be in the /seeds directory, and should be named, for example, "de\_government.txt". It should have the following format:
 
-`https://www.bundesregierung.de/
+```
+https://www.bundesregierung.de/
 http://www.auswaertiges-amt.de/
 http://www.bmi.bund.de/
 http://www.bmj.de/
@@ -40,7 +43,8 @@ http://www.bundesgesundheitsministerium.de/
 http://www.bmvbs.de/
 http://www.bmub.de/
 https://www.bmbf.de/
-http://www.bmz.de/`
+http://www.bmz.de/
+```
 
 The crawler has a "filter" option, which restricts the URLs checked to ones fitting a certain regular expression. This tool generates this filter automatically for each website. For example, for the first three, it will be "bundesregierung.de", "auswaertiges-amt.de" and "bmi.bund.de". There is a danger that despite this filter, unwanted websites will appear, however there is a script that we can use later on to weed out the unwanted websites.
 
