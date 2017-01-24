@@ -78,11 +78,12 @@ if not os.path.isdir("seeds/" + basename):
 
 numberofseeds = len(os.listdir("seeds/" + basename))
 
+os.mkdir("logs/" + basename)
+os.mkdir("corpora/" + basename)
+
 with open("shellscripts/" + filename, "w") as f:
     f.write("#!/bin/bash\n")
-    f.write("echo \"Making a few directories... let's get this webcrawl started!!\"\n")
-    f.write("mkdir logs/" + basename + "\n")
-    f.write("mkdir corpora/" + basename + "\n")
+    f.write("echo \"Let's get this webcrawl started!!\"\n")
     for i in range(numberofseeds):
         spec_basename = basename + "_" + str(i)
         filterexp = generate_filter(spec_basename)
